@@ -1,0 +1,56 @@
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\documentclass[11pt, a4paper]{russell}
+
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\fontdir[fonts/]
+
+\colorlet{russell}{russell-black}
+
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%-------------------------------------------------------------------------------
+%	REQUIRED PACKAGES
+%-------------------------------------------------------------------------------
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage[backend=biber,style=numeric]{biblatex}  
+\addbibresource{cv/references.bib}  
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Ibrahim}{Ahmed Ibrahim}
+\address{.NET Back-End Engineer, EG}
+\mobile{+20 01008520964}
+\email{ibrahim.ahmd.net@gmail.com}
+\github{ibrhmahmd}
+\linkedin{Ibrhmahmd}
+\medium{ibrhmahmd}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader
+\makecvfooter{\today}{}{\thepage}
+
+\input{cv/summary.tex}
+\input{cv/skills.tex}
+\input{cv/projects.tex}
+\input{cv/experience}
+\input{cv/Publications.tex}  % Publications Section
+\input{cv/achievements.tex}
+\input{cv/education.tex}
+\input{cv/languages.tex}
+
+\vspace*{\fill}
+\centering{\textbf{References available upon request.}}
+
+%-------------------------------------------------------------------------------
+% PRINT BIBLIOGRAPHY AT THE END
+%-------------------------------------------------------------------------------
+\printbibliography
+
+\end{document}
