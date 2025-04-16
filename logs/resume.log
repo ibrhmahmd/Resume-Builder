@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.4.15)  16 APR 2025 03:39
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.4.15)  16 APR 2025 05:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1303,42 +1303,42 @@ Overfull \hbox (69.4979pt too wide) in alignment at lines 10--53
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <9> not avail
 able
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on inpu
-t line 29.
+t line 30.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 29.
+(Font)              scaled to size 9.0pt on input line 30.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 29.
+(Font)              scaled to size 9.0pt on input line 30.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 29.
+(Font)              scaled to size 8.0pt on input line 30.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <8> not avail
 able
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on inpu
-t line 29.
+t line 30.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 29.
+(Font)              scaled to size 8.0pt on input line 30.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 29.
+(Font)              scaled to size 9.0pt on input line 30.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 97.
+(Font)              scaled to size 8.0pt on input line 100.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/sc' will be
-(Font)              scaled to size 8.0pt on input line 97.
+(Font)              scaled to size 8.0pt on input line 100.
 [1
 
 ]
-cv/projects.tex:133: Illegal parameter number in definition of \@sharp.
+cv/projects.tex:164: Illegal parameter number in definition of \@sharp.
 <to be read again> 
                    .
-l.133     }
+l.164     }
            
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-cv/projects.tex:133: You can't use `macro parameter character #' in horizontal 
+cv/projects.tex:164: You can't use `macro parameter character #' in horizontal 
 mode.
 <argument> ...t:}{Developed using WPF.NET with C##
                                                   . includes various classes...
-l.133     }
+l.164     }
            
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1427,7 +1427,7 @@ Package logreq Info: Writing requests to 'resume.run.xml'.
 Here is how much of TeX's memory you used:
  40317 strings out of 409617
  810986 string characters out of 5773607
- 1956191 words of memory out of 5000000
+ 1957191 words of memory out of 5000000
  61816 multiletter control sequences out of 15000+600000
  560929 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

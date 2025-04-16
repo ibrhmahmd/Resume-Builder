@@ -3,7 +3,7 @@ rem Configure these variables to match your setup
 rem MiKTeX installation path
 set MIKTEX_PATH=C:\Users\ibrahim\AppData\Local\Programs\MiKTeX\miktex\bin\x64
 rem Your name (will be used in the output PDF filename)
-set USER_NAME=IbrahimAhmed
+set USER_NAME=Ibrahim.Ahmed.Net
 
 rem Configure input and output filenames
 set INPUT_FILE=resume.tex

@@ -1,11 +1,11 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'resume.blg'
-[241] biber-MSWIN64:340> INFO - === 
-[302] Biber.pm:419> INFO - Reading 'resume.bcf'
-[509] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[510] Biber.pm:979> INFO - Found 3 citekeys in bib section 1
-[511] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[578] Biber.pm:4419> INFO - Processing section 1
-[604] Biber.pm:4610> INFO - Looking for bibtex file 'cv/references.bib' for section 1
-[1139] Utils.pm:410> ERROR - Cannot find 'cv/references.bib'!
-[1140] Biber.pm:136> INFO - ERRORS: 1
+[281] biber-MSWIN64:340> INFO - === 
+[340] Biber.pm:419> INFO - Reading 'resume.bcf'
+[581] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[582] Biber.pm:979> INFO - Found 3 citekeys in bib section 1
+[582] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[631] Biber.pm:4419> INFO - Processing section 1
+[676] Biber.pm:4610> INFO - Looking for bibtex file 'cv/references.bib' for section 1
+[1408] Utils.pm:410> ERROR - Cannot find 'cv/references.bib'!
+[1412] Biber.pm:136> INFO - ERRORS: 1

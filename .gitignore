@@ -1,0 +1,62 @@
+# LaTeX generated files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.dvi
+*.xdv
+*-converted-to.*
+*.pdf
+*.ps
+*.eps
+*.tex~
+*.sty~
+*.cls~
+
+# BibTeX & BibLaTeX
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+# Build tool auxiliary files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# Custom auxiliary files
+_minted*
+*.pyg
+
+# Keep all directories
+!*/
+
+# But exclude log directory contents
+logs/*
+!logs/.gitkeep
+
+# Project memory directories - keep directories but ignore contents
+Projects-Memories/**/*
+!Projects-Memories/**/.gitkeep
+
+# Memory bank directory - keep directory but ignore contents
+memory-bank/**/*
+!memory-bank/**/.gitkeep
+
+# Project plan file
+project-memory-to-latex-plan.md
+
+# Generated PDFs, but keep the directory
+*.pdf
+!font/*.pdf 
