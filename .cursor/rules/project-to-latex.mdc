@@ -3,3 +3,84 @@ description:
 globs: 
 alwaysApply: false
 ---
+# Project Memory Bank to LaTeX Converter
+
+This rule helps convert a project's memory bank files into a LaTeX entry suitable for the CV projects section.
+
+## Instructions
+
+When converting a project, follow these steps:
+
+1. Read all memory bank files from Projects-Memories/{project-name}-memory-bank/
+2. Extract key information from:
+   - projectbrief.md → Main project description
+   - techContext.md → Technical skills
+   - systemPatterns.md → Architecture details
+   - productContext.md → Features
+   - activeContext.md → Current status
+   - progress.md → Performance metrics
+
+3. Generate a LaTeX entry following this template:
+```latex
+\cventry
+    {[Description from projectbrief.md]} % 
+    {[Project Name]} % Project name
+    {--} % Organisation (will be filled by user)
+    {Date} % Date(s) (will be filled by user)
+    {
+      \begin{cvitems} % Description(s) bullet points
+        \item \textbf{Architecture:}{ [Details from systemPatterns.md]}
+        \item \textbf{Features:}{ [Features from productContext.md]}
+        \item \textbf{Performance:}{ [Metrics from progress.md]}
+        \item \textbf{Technical Skills:}{ [Skills from techContext.md]}
+      \end{cvitems}
+    }
+    %--------------------------------------------------------------------
+    
+    \begin{singlespace}
+% Your text here ----
+----
+\end{singlespace}
+```
+
+4. When updating an existing entry, find and replace the entire entry for the project
+5. When adding a new entry, place it before the end of the \cventries environment
+
+## File Mapping Guidelines
+
+1. For **projectbrief.md**:
+   - Extract the main project description from the "Project Overview" section
+   - Format it as a concise paragraph
+
+2. For **techContext.md**:
+   - Extract technologies listed under "Technologies Used" or "Core Technologies"
+   - Focus on major technologies/frameworks, not minor libraries
+   - Format as a comma-separated list
+
+3. For **systemPatterns.md**:
+   - Extract architecture information from "Architecture Overview"
+   - Focus on high-level design patterns and structure
+
+4. For **productContext.md**:
+   - Extract features from "Features" or "Key Features" section
+   - Include main user-facing functionality
+
+5. For **progress.md**:
+   - Extract performance metrics or achievements
+   - Focus on quantifiable results when available
+
+## Project Structure
+The Projects-Memories directory contains subdirectories for each project:
+```
+Projects-Memories/
+├── ProjectName1-memory-bank/
+│   ├── projectbrief.md
+│   ├── techContext.md
+│   ├── systemPatterns.md
+│   └── ...
+├── ProjectName2-memory-bank/
+│   ├── projectbrief.md
+│   └── ...
+```
+
+Always maintain the LaTeX formatting of the projects.tex file, including the proper use of \cventries environments. 

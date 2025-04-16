@@ -16,7 +16,7 @@
 %-------------------------------------------------------------------------------
 \usepackage{hyperref}
 \usepackage{url}
-\usepackage[backend=biber,style=numeric]{biblatex}  
+\usepackage[backend=biber,style=authoryear,sorting=ydnt,defernumbers=true]{biblatex}  
 \addbibresource{cv/references.bib}  
 
 %-------------------------------------------------------------------------------
@@ -40,17 +40,16 @@
 \input{cv/skills.tex}
 \input{cv/projects.tex}
 \input{cv/experience}
-\input{cv/Publications.tex}  % Publications Section
+\input{cv/publications.tex}  % Publications Section
 \input{cv/achievements.tex}
 \input{cv/education.tex}
-\input{cv/languages.tex}
+% \input{cv/languages.tex}
 
 \vspace*{\fill}
-\centering{\textbf{References available upon request.}}
+% \centering{\textbf{References available upon request.}}
 
 %-------------------------------------------------------------------------------
-% PRINT BIBLIOGRAPHY AT THE END
+% No need for bibliography at the end since we're manually listing publications
 %-------------------------------------------------------------------------------
-\printbibliography
 
 \end{document}

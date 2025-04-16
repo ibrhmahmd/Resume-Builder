@@ -8,16 +8,20 @@
  %-------------------------------------------------------------------------------
  \cvsubsection{Medium Articles}
 
- \begin{refsection}
- 	\nocite{StartingWithOllama}
- 	\nocite{DataBaseFirstVSCodeFirst}
- 	\nocite{OllamaModels}
+ % Use nocite to include all references
+ \nocite{StartingWithOllama}
+ \nocite{DataBaseFirstVSCodeFirst}
+ \nocite{OllamaModels}
 
- 	\newrefcontext[sorting=ydnt]
- 	\printbibliography[
- 	heading=none
-	]
- \end{refsection}
+ \begin{singlespace}
+  % Your text here ----
+  \end{singlespace}
+ % Create a custom environment to list the articles
+ \begin{cvitems}
+   \item {\small\textbf{Starting With Ollama:} Run and Customize Large Language Models (LLMs) Locally (September 2024) — \href{https://ibrhmahmd.medium.com/starting-with-ollama-cfbdc69be5eb}{\color{midnightblue}\textbf{Medium}}}
+   \item {\small\textbf{Introduction to Ollama's LLMs:} Basics, Parameters, Templates, and Configurations (October 2024) — \href{https://ibrhmahmd.medium.com/introduction-to-ollama-s-models-dd86fc213b90}{\color{midnightblue}\textbf{Medium}}}
+   \item {\small\textbf{Code First vs. Database First in EF Core:} Which Approach Should You Choose? (October 2024) — \href{https://ibrhmahmd.medium.com/code-first-vs-database-first-in-ef-core-which-approach-should-you-choose-4c9cb6ea23bc}{\color{midnightblue}\textbf{Medium}}}
+ \end{cvitems}
 
  %-------------------------------------------------------------------------------
 

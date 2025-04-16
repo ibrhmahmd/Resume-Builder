@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.4.15)  16 APR 2025 05:27
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.4.15)  16 APR 2025 19:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1120,11 +1120,11 @@ The package biblatex has already been loaded with options:
   [sorting=ydnt,style=verbose,doi=false,isbn=true,url=false,eprint=false,backre
 f=false,maxcitenames=3,maxbibnames=99,hyperref=true,block=none,backend=biber]
 There has now been an attempt to load it with options
-  [backend=biber,style=numeric]
+  [backend=biber,style=authoryear,sorting=ydnt,defernumbers=true]
 Adding the global options:
   sorting=ydnt,style=verbose,doi=false,isbn=true,url=false,eprint=false,backref
 =false,maxcitenames=3,maxbibnames=99,hyperref=true,block=none,backend=biber,bac
-kend=biber,style=numeric
+kend=biber,style=authoryear,sorting=ydnt,defernumbers=true
 to your \documentclass declaration may fix this.
 Try typing  <return>  to proceed.
 
@@ -1246,8 +1246,8 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `resume.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'resume.bbl' found.
-(E:\Users\Ibrahim\Desktop\Resume-LATEX\logs\resume.bbl)
+Package biblatex Info: ... file 'resume.bbl' not found.
+No file resume.bbl.
 Package biblatex Info: Reference section=0 on input line 34.
 Package biblatex Info: Reference segment=0 on input line 34.
 \headertextwidth=\skip110
@@ -1295,143 +1295,1043 @@ LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 15.
 
-Overfull \hbox (69.4979pt too wide) in alignment at lines 10--53
+Overfull \hbox (69.4979pt too wide) in alignment at lines 10--47
 [] [] 
  []
 
 ) (cv/projects.tex
+
+cv/projects.tex:26: Package xcolor Error: Undefined color `midnightblue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26     }
+          
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <9> not avail
 able
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on inpu
-t line 30.
+t line 26.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 30.
+(Font)              scaled to size 9.0pt on input line 26.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 30.
+(Font)              scaled to size 9.0pt on input line 26.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 30.
+(Font)              scaled to size 8.0pt on input line 26.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <8> not avail
 able
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on inpu
-t line 30.
+t line 26.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 30.
+(Font)              scaled to size 8.0pt on input line 26.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 30.
-LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 100.
-LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/sc' will be
-(Font)              scaled to size 8.0pt on input line 100.
-[1
-
-]
-cv/projects.tex:164: Illegal parameter number in definition of \@sharp.
-<to be read again> 
-                   .
-l.164     }
-           
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
-
-cv/projects.tex:164: You can't use `macro parameter character #' in horizontal 
-mode.
-<argument> ...t:}{Developed using WPF.NET with C##
-                                                  . includes various classes...
-l.164     }
-           
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-) (cv/experience.tex
-Overfull \hbox (2.92001pt too wide) in paragraph at lines 24--40
-   [] 
- []
-
-[2]) (cv/Publications.tex
-LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 9.
-LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 9.
-\blx@maxsegment@1=\count463
-\blx@sectionciteorder@1=\count464
-Package biblatex Info: Reference section=1 on input line 11.
-Package biblatex Info: Setting label 'refsection:1' on input line 11.
-
-LaTeX Warning: Citation 'StartingWithOllama' undefined on input line 12.
-
-
-LaTeX Warning: Citation 'DataBaseFirstVSCodeFirst' undefined on input line 13.
-
-
-LaTeX Warning: Citation 'OllamaModels' undefined on input line 14.
-
-
-LaTeX Warning: Empty bibliography on input line 17.
-
-Package biblatex Info: Reference section=0 on input line 20.
-) (cv/achievements.tex
-LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 18.
-) (cv/education.tex
-cv/education.tex:34: Illegal parameter number in definition of \@sharp.
-<to be read again> 
-                   ,
-l.34     }
+(Font)              scaled to size 9.0pt on input line 26.
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
           
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
-cv/education.tex:34: You can't use `macro parameter character #' in horizontal 
-mode.
-<argument> ...anaging, MS SQL Server, Advanced C##
-                                                  , LinQ, Entity Framework, ...
-l.34     }
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
           
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-Overfull \hbox (2.92001pt too wide) in paragraph at lines 23--36
-   [] 
- []
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
-) (cv/languages.tex)
-LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 49.
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-LaTeX Warning: Empty bibliography on input line 54.
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
-[3] (E:\Users\Ibrahim\Desktop\Resume-LATEX\logs\resume.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
- ***********
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-LaTeX Warning: There were undefined references.
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                resume
-(biblatex)                and rerun LaTeX afterwards.
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
-Package logreq Info: Writing requests to 'resume.run.xml'.
-\openout1 = `resume.run.xml'.
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
- ) 
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+cv/projects.tex:26: Extra }, or forgotten \endgroup.
+<inserted text> }
+                 
+l.26     }
+          
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+cv/projects.tex:26: Missing } inserted.
+<inserted text> 
+                }
+l.26     }
+          
+(That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 40317 strings out of 409617
- 810986 string characters out of 5773607
- 1957191 words of memory out of 5000000
- 61816 multiletter control sequences out of 15000+600000
- 560929 words of font info for 133 fonts, out of 8000000 for 9000
+ 40226 strings out of 409617
+ 808443 string characters out of 5773607
+ 1924191 words of memory out of 5000000
+ 61751 multiletter control sequences out of 15000+600000
+ 560897 words of font info for 129 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 116i,12n,129p,566b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,9n,129p,566b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on E:\Users\Ibrahim\Desktop\Resume-LATEX\logs\resume.pdf (3 page
-s).
+No pages of output.
