@@ -1,56 +1,337 @@
-%-------------------------------------------------------------------------------
-% CONFIGURATIONS
-%-------------------------------------------------------------------------------
-\documentclass[11pt, a4paper]{russell}
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
-\fontdir[fonts/]
+\documentclass[letterpaper,11pt]{article}
 
-\colorlet{russell}{russell-black}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
 
-\setbool{acvSectionColorHighlight}{true}
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\usepackage{xcolor}
+\definecolor{primary}{HTML}{0051FF}
+\definecolor{secondary}{HTML}{2C3E50}
+\definecolor{accent}{HTML}{E74C3C}
 
-%-------------------------------------------------------------------------------
-%	REQUIRED PACKAGES
-%-------------------------------------------------------------------------------
+% Section title styling
+\titleformat{\section}
+  {\Large\bfseries\color{secondary}}
+  {}{0em}
+  {}[\color{secondary}\titlerule \vspace{-5pt}]
+
 \usepackage{hyperref}
-\usepackage{url}
-\usepackage[backend=biber,style=numeric]{biblatex}  
-\addbibresource{cv/references.bib}  
+\newcommand{\mylink}[2]{\href{#1}{\textcolor{primary}{\uline{#2}}}}
 
-%-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%-------------------------------------------------------------------------------
-\name{Ibrahim}{Ahmed Ibrahim}
-\address{.NET Back-End Engineer, EG}
-\mobile{+20 01008520964}
-\email{ibrahim.ahmd.net@gmail.com}
-\github{ibrhmahmd}
-\linkedin{Ibrhmahmd}
-\medium{ibrhmahmd}
 
-%-------------------------------------------------------------------------------
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+%\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & {\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%
+
+
 \begin{document}
 
-\makecvheader
-\makecvfooter{\today}{}{\thepage}
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
 
-\input{cv/summary.tex}
-\input{cv/skills.tex}
-\input{cv/projects.tex}
-\input{cv/experience}
-\input{cv/Publications.tex}  % Publications Section
-\input{cv/achievements.tex}
-\input{cv/education.tex}
-\input{cv/languages.tex}
+\begin{center}
+    {\Huge Ahmed Abdulrahim} \\ \vspace{3pt}\textit{.NET Developer} \\ \vspace{5pt}
+    \small \faPhone\ +201091028577 ~ \href{mailto:ahmedabdulrahim156@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{ahmedabdulrahim156@gmail.com}} ~ 
+    \href{https://www.linkedin.com/in/master156/}{\raisebox{-0.1\height}\faLinkedin\ \underline{Ahmed Abdulrahim}}  ~
+    \href{https://github.com/MaStEr156}{\raisebox{-0.1\height}\faGithub\ \underline{MaStEr156}}
+    \vspace{1pt}
+\end{center}
 
-\vspace*{\fill}
-\centering{\textbf{References available upon request.}}
 
-%-------------------------------------------------------------------------------
-% PRINT BIBLIOGRAPHY AT THE END
-%-------------------------------------------------------------------------------
-\printbibliography
+%-----------Summary-----------
+\section{\LARGE Summary}
+\vspace{5pt}
+A Computer Science student and \textbf{.NET developer} with hands-on experience in building full-stack web applications using \textbf{C\#} and \textbf{ASP.NET Core}. Demonstrated success in developing scalable solutions including an online learning platform and blood bank management system. Strong foundation in software engineering principles, data structures, and algorithms with competitive programming experience. Quick to adapt and team-oriented, eager to contribute to impactful software projects.
+\vspace{5pt}
+    \resumeItemListEnd
+
+\vspace{-5pt}
+%-----------EDUCATION-----------
+\section{\LARGE Education}
+\vspace{5pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Kafrelsheikh University}{\textit{Sep. 2021 -- Expected Jun. 2025}}
+      {Bachelor of \textbf{Computer Science} $|$ Faculty of \textbf{Computers and Information}}{\textit{GPA: \textbf{3.2}}}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Database Systems, Software Engineering, Operating Systems, Computer Networks, Web Development}
+        \resumeItem{\textbf{Academic Projects:} Developed a Blood Bank Management System using C\# and SQL Server}
+        \resumeItem{\textbf{Activities:} Member of University Programming Club, Participated in ECPC 2022 \& 2023}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  \vspace{-15pt}
+%-----------TRAINING-----------
+\section{\LARGE Training}
+\vspace{5pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {DEPI}{\textit{Jun 2024 -- Oct 2024}}
+      {Digital Egypt Pioneers Initiative}{\textit{Hybrid}}
+      \resumeItemListStart
+          \resumeItem{Web Development .NET Core Framework Track.}
+          \vspace{-7pt}
+          \resumeItem{\textbf{Courses:} Database Design, MS SQL Server, C\#, EF Core, MVC, RESTful API, Security, Multithreading, Business English.}
+          \vspace{-18pt}
+          \resumeItem{Developed \textbf{Learnflow}, an Online Learning Platform, as a final project.}
+      \resumeItemListEnd
+      \vspace{-10pt}
+    \resumeSubheading{ITI}{\textit{Jul - Aug \& Sep 2024}}{Summer Training}{\textit{Hybrid}}
+    \resumeItemListStart
+        \resumeItem{Web Development .NET Core Framework Track.}
+        \vspace{-7pt}
+        \resumeItem{Completed a 20-day intensive training in .NET Core, covering Database 
+        Fundamentals, C\#, OOP, LINQ, Entity Framework, and MVC.}
+        \vspace{-7pt}
+        \resumeItem{Developed a university management system as a final project using Code First and CRUD operations.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  \vspace{-15pt}
+%-----------PROJECTS-----------
+\section{\LARGE Projects}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading{\textbf{\large OllamaNet – Microservices Framework} $|$ \emph{.NET Developer $|$ ASP.NET Core Microservices
+          }}{\textit{2025}}
+          
+          \small{A microservices framework for integrating Ollama's LLM capabilities into .NET applications with distributed architecture.}
+          \resumeItemListStart
+            \resumeItem{Architected a microservices-based framework with high availability and scalability using ASP.NET Core.}
+            \resumeItem{Implemented distributed caching and rate limiting using Redis, improving response times and ensuring system stability.}
+            \resumeItem{Designed a secure API Gateway with JWT authentication and role-based access control, protecting sensitive endpoints.}
+            \resumeItem{Built a scalable message queue system using RabbitMQ for asynchronous communication between services.}
+            \vspace{9pt}
+            \newline
+            \textbf{Technologies:} .NET Core, Microservices, Redis, RabbitMQ, JWT, Docker, Git
+            \resumeItemListEnd
+    \vspace{-10pt}
+          
+    \resumeProjectHeading{\textbf{\large LearnFlow – Online Learning Platform} $|$ \emph{.NET Developer $|$ .NET Core -- MVC Web App
+          }}{\textit{October 2024}}
+          
+          \small{An online learning platform for managing courses and quizzes while tracking student progress.}
+          \resumeItemListStart
+            \resumeItem{Developed LearnFlow, a comprehensive online learning platform with role-based access control.}
+            \resumeItem{Implemented a dynamic quiz system with support for multiple question types and automated scoring.}
+            \resumeItem{Designed an admin dashboard for course management with analytics and progress tracking.}
+            \resumeItem{Integrated a student progress tracking module with real-time grade updates.}
+            \vspace{9pt}
+            \newline
+            \textbf{Technologies:} .NET Core, Entity Framework Core, SQL Server, JavaScript, MVC, Git
+            \resumeItemListEnd
+    \vspace{-10pt}
+          
+    \resumeProjectHeading
+          {\textbf{\large Blood Bank Management System} $|$ Backend Developer $|$ \emph{C\# - Windows Forms App 
+          }}{\textit{December 2023}}
+          \vspace{-10pt}
+          \resumeItemListStart
+            \resumeItem{Led development of a Blood Bank Management System for hospital blood inventory management.}
+            \vspace{-2pt}
+            \resumeItem{Implemented secure role-based access with real-time inventory tracking.}
+            \vspace{-2pt}
+            \resumeItem{Designed a scalable database architecture with automated stock alerts.}
+            \vspace{-2pt}
+            \resumeItem{Reduced blood request processing time through automated matching algorithms.}
+            \vspace{9pt}
+            \newline
+            \textbf{Technologies:} C\#, Windows Forms, SQL Server, Database Design, OOP, Git
+            \resumeItemListEnd 
+        \vspace{-10pt}
+     \resumeProjectHeading
+          {\textbf{\large Holly View} $|$ \emph{Back-end Developer $|$ ASP.NET Developer $|$ C\# - Web Application
+          }}{\textit{May 2023}}
+          \vspace{-8pt}
+          \resumeItemListStart
+            \resumeItem{Developed Holly View, an entertainment platform, with secure user authentication and authorization using password hashing to protect user data.}
+            \vspace{-2pt}
+            \resumeItem{Implemented a personalized watch-list feature to enhance user engagement.}
+            \vspace{-2pt}
+            \resumeItem{Designed a review system with sentiment analysis capabilities.}
+            \vspace{-2pt}
+            \resumeItem{Built an admin panel for movie management with content moderation features.}
+            \vspace{9pt}
+            \newline
+            \textbf{Technologies:} ASP.NET, SQL Server, Authentication \& Authorization, Git
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+
+%
+
+%----------- Achievements and Relevant EXPERIENCE-----------
+% \section{\LARGE Experience and Extracurricular Activities}
+% \vspace{7pt}
+%   \begin{itemize}
+%   \item Ranked \textbf{32nd} out of 200 teams in \textbf{ECPC 2023} Day 2 qualification contest as part of team. \mylink{https://drive.google.com/file/d/1ZqKYU-Jbbv8No0LKNw9H0fWvTsW_Y2Qy/view?usp=sharing}{Certificate}.
+%   \vspace{-2pt}
+%   \item Ranked \textbf{66th} out of 200 teams in \textbf{ECPC 2022} Day 2 qualification contest as part of team.
+% \mylink{https://drive.google.com/file/d/1HGqw4QKS5BS-BLO3OBrQTov1snqxV5BU/view?usp=sharing}{Certificate}.
+%   \vspace{-2pt}
+%   \item Well established Knowledge in \textbf{Data Structure and Algorithms} and solved over 200 problems on \textbf{Codeforces} in \textbf{C++}.
+%   \vspace{-2pt}
+%   \item {\textbf{Codeforces} profile \mylink{https://codeforces.com/profile/itsMaStEr}{itsMaStEr}. (Current rate: 971).}
+%   \vspace{-2pt}
+%   \item \color Has successfully completed a 45 hour training course and created a final project for a potential startup in \textbf{InnovEgypt} program \mylink{https://drive.google.com/file/d/1r-PqcUwbcN1YZ7d1Z0_aXWnZMQVRUcLI/view?usp=sharing}{Certificate}.
+%   \item Was a member of my college's \textbf{Students' Union} for over a year and a half and have been vice head of the scouts committee.
+% \end{itemize}
+% \vspace{-10pt}
+
+
+%-----------Technical SKILLS-----------
+\section{\LARGE Technical Skills}
+\vspace{7pt}
+\renewcommand{\arraystretch}{1.3}
+ \begin{tabular}{>{\raggedleft\arraybackslash}m{3.5cm} p{13cm}}
+\large{\textbf{Programming Languages}}  & \hspace{8px}  C\# (Primary), C++, SQL, HTML/CSS, Python \\
+\large{\textbf{Frameworks \& Libraries}} & \hspace{8px} .NET Core, ASP.NET MVC, Entity Framework Core, RESTful APIs \\
+\large{\textbf{Databases \& Tools}} & \hspace{8px} MS SQL Server, Git/GitHub, Visual Studio, Swagger UI \\
+\large{\textbf{Software Design}} & \hspace{8px} OOP, Design Patterns, SOLID Principles, Clean Architecture \\
+\large{\textbf{Problem Solving}} & \hspace{8px} Data Structures, Algorithms, Competitive Programming \\
+\large{\textbf{Soft Skills}} & \hspace{8px} Leadership, Team Collaboration, Problem Solving, Communication \\
+\end{tabular}
+ 
+\vspace{-5pt}
+%-----------Certified Courses-----------
+\section{\LARGE Certifications and Achievements}
+\vspace{10pt}
+
+\begin{itemize}
+    \item \textbf{Competitive Programming}
+        \resumeItemListStart
+            \resumeItem{Ranked \textbf{32nd} out of 200 teams (top 16\%) in \textbf{ECPC 2023} and \textbf{66th} (top 33\%) in \textbf{ECPC 2022} Day 2 qualification contests}
+            \resumeItem{Active competitive programmer on \textbf{Codeforces} with 200+ solved problems using \textbf{C++} (Current rating: 971)}
+        \resumeItemListEnd
+    
+    \item \textbf{Professional Development}
+        \resumeItemListStart
+            \resumeItem{\textbf{DEPI} - Digital Egypt Pioneers Initiative (\textit{Jun-Oct 2024}): Completed comprehensive .NET Core development track, developed LearnFlow as final project}
+            \resumeItem{\textbf{ITI} - Summer Training (\textit{Jul-Sep 2024}): Intensive 20-day .NET Core training with focus on database design and web development}
+        \resumeItemListEnd
+    
+    \item \textbf{Additional Certifications}
+        \resumeItemListStart
+            \resumeItem{\textbf{InnovEgypt} - Entrepreneurship Training (\textit{Sep 2022}): Completed 45-hour program and developed startup project proposal}
+            \resumeItem{\textbf{FWD} - Web Development Challenger: Advanced HTML/CSS certification \& \textbf{Udacity} - Intro To Programming fundamentals}
+        \resumeItemListEnd
+\end{itemize}
+\vspace{-5pt}
+
+%-----------Language Skills-----------
+\section{\LARGE Language Skills}
+\vspace{10pt}
+
+\begin{itemize}
+  \item \textbf{Arabic}: Native Proficiency
+  \item \textbf{English}: Professional Working Proficiency (Reading, Writing, Speaking)
+\end{itemize}
+\vspace{-5pt}
+ 
+
 
 \end{document}
