@@ -1,11 +1,8 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is 'resume.blg'
-[281] biber-MSWIN64:340> INFO - === 
-[340] Biber.pm:419> INFO - Reading 'resume.bcf'
-[581] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[582] Biber.pm:979> INFO - Found 3 citekeys in bib section 1
-[582] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[631] Biber.pm:4419> INFO - Processing section 1
-[676] Biber.pm:4610> INFO - Looking for bibtex file 'cv/references.bib' for section 1
-[1408] Utils.pm:410> ERROR - Cannot find 'cv/references.bib'!
-[1412] Biber.pm:136> INFO - ERRORS: 1
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'resume.blg'
+[187] biber-MSWIN64:340> INFO - === 
+[246] Biber.pm:420> INFO - Reading 'resume.bcf'
+[433] Utils.pm:410> ERROR - Error: Found biblatex control file version 3.10, expected version 3.11.
+This means that your biber (2.20) and biblatex (3.19) versions are incompatible.
+See compat matrix in biblatex or biber PDF documentation.
+[435] Biber.pm:136> INFO - ERRORS: 1
