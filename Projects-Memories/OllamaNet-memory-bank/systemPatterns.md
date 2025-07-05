@@ -1,180 +1,54 @@
-# System Architecture Patterns
+# System Patterns – OllamaNet
 
-## Microservices Architecture
+## Architectural Overview
+```mermaid
+flowchart TD
+    Gateway -->|HTTP| AuthService
+    Gateway --> ConversationService
+    Gateway --> ExploreService
+    Gateway --> AdminService
+    ConversationService -->|DB & Cache| SQL[(SQL Server)]
+    ConversationService --> Redis[(Redis)]
+    ExploreService --> SQL
+    ExploreService --> Redis
+    AdminService --> SQL
+    AuthService --> SQL
+    subgraph Messaging
+        AdminService <--> RabbitMQ((RabbitMQ))
+    end
+```
 
-### Service Components
-1. **API Gateway**
-   - Entry point for all client requests
-   - JWT token validation and caching
-   - Rate limiting implementation
-   - Request routing using Ocelot
-   - Redis-based token caching
-   - Distributed rate limiting
+### Pattern Catalogue
+| Pattern | Where Applied | Rationale |
+|---------|---------------|-----------|
+| **Clean Architecture** | All services | Decouple domain/business logic from infrastructure. Facilitates unit testing & independent evolution. |
+| **Repository Pattern** | `Ollama_DB_layer` | Abstracts SQL Server access; allows swap to other stores or mocking. |
+| **Service Registration Extensions** | `ServiceExtensions.cs` in each service | Centralises DI wiring for readability. |
+| **Resilience Policies (Polly)** | `RabbitMQResiliencePolicies`, Redis wrappers | Circuit-breaker & retry around external dependencies. |
+| **Distributed Cache** | `RedisCacheService` | Reduce DB load & latency; TTL tuned per-domain. |
+| **Server-Sent Events (SSE)** | Chat streaming endpoints | Low-latency, uni-directional stream suited for incremental LLM tokens. |
+| **JWT Authentication** | Gateway + downstream | Stateless auth, roles encoded in claims, 30-day refresh flow. |
+| **CI/CD GitHub Actions (planned)** | _future_ | Build, test, push images, deploy to K8s. |
 
-2. **Authentication Service**
-   - User authentication and authorization
-   - JWT token generation
-   - User profile management
-   - Token validation endpoint
+## Component Responsibilities
+1. **Gateway** – Single ingress; applies auth, rate-limiting, and forwards to downstream via Ocelot.
+2. **AuthService** – User registration, login, token issuance, profile & password management.
+3. **ConversationService** – CRUD conversations & messages, chat streaming, folder & note management.
+4. **ExploreService** – Public catalogue of AI models & tags for discovery.
+5. **AdminService** – Administrative operations: model lifecycle, tag CRUD, user & role ops, inference job control.
 
-3. **Chat Services**
-   - Real-time chat processing
-   - Conversation management
-   - Message handling
-   - Synchronous communication with LLM Inference Service
+## Data Flow (Chat)
+1. Client calls `POST /api/chats/stream` via Gateway with JWT.
+2. Gateway validates token, forwards to ConversationService.
+3. ConversationService queries cache; if miss, fetches context from SQL.
+4. Service streams prompt to Ollama runtime; tokens forwarded to client via SSE.
+5. Response cached (Redis) for subsequent retrieval.
 
-4. **Explore Service**
-   - Model discovery and search
-   - Available models listing
-   - Synchronous communication with LLM Inference Service
-   - Redis caching for performance optimization
-   - Cache invalidation strategies
+## Cross-Cutting Concerns
+* **Logging** – Structured JSON logs via `ILogger<>`; aggregated by external stack.
+* **Validation** – FluentValidation for DTOs; automatically resolved by DI.
+* **Error Handling** – Controller-level try/catch -> HTTP codes; custom exception hierarchies.
+* **Monitoring** – `/health` endpoints per service; readiness & liveness probes.
 
-5. **Admin Services**
-   - System administration
-   - Audit logging
-   - Background task management
-   - Asynchronous communication with LLM Inference Service
-
-6. **LLM Inference Service**
-   - Hosts and manages LLMs
-   - Handles model inference requests
-   - Model lifecycle management
-
-### Communication Patterns
-
-#### Synchronous Communication
-- Real-time chat operations
-- Authentication requests
-- Model discovery and search
-- User profile operations
-- Direct API calls between services
-
-#### Asynchronous Communication (Message Queue)
-- Model installation/deletion
-- System configuration updates
-- Audit logging
-- Background tasks
-- Cross-service notifications
-- Usage statistics collection
-
-### Infrastructure Components
-1. **Service Registry**
-   - Service discovery
-   - Load balancing
-   - Health monitoring
-
-2. **Config Server**
-   - Centralized configuration
-   - Environment-specific settings
-
-3. **Message Queue**
-   - Asynchronous communication
-   - Task queuing
-   - Event distribution
-
-4. **Distributed Cache (Redis)**
-   - Token caching
-   - Rate limiting counters
-   - Performance optimization
-   - Session management
-   - Data caching
-   - Cache invalidation
-   - Health monitoring
-   - Connection management
-
-5. **Monitoring**
-   - System health monitoring
-   - Performance metrics
-   - Logging and tracing
-   - Cache hit/miss ratios
-   - Redis connection status
-   - Rate limit monitoring
-   - Authentication metrics
-
-### Database Architecture
-- **Shared Database Approach**
-  - Single database instance for all services
-  - Unified data access layer
-  - Shared schema for common entities
-  - Service-specific schemas where needed
-  - Centralized data consistency
-  - Simplified transaction management
-  - Reduced operational complexity
-
-### Database Dependencies
-- All Services → Shared Database
-  - Authentication Service
-  - Chat Services
-  - Explore Service
-  - Admin Services
-  - LLM Inference Service
-
-## Design Patterns in Use
-
-1. **API Gateway Pattern**
-   - Single entry point
-   - Request routing
-   - Authentication/Authorization
-   - Rate limiting
-   - Token caching
-
-2. **Service Discovery Pattern**
-   - Dynamic service registration
-   - Load balancing
-   - Health checks
-
-3. **Circuit Breaker Pattern**
-   - Fault tolerance
-   - Service resilience
-   - Graceful degradation
-
-4. **CQRS Pattern**
-   - Separate read/write models
-   - Optimized queries
-   - Event sourcing
-
-5. **Event-Driven Architecture**
-   - Asynchronous communication
-   - Loose coupling
-   - Scalability
-
-6. **Cache-Aside Pattern**
-   - Lazy loading
-   - Cache invalidation
-   - Write-through caching
-   - Read-through caching
-
-## Component Relationships
-
-### Direct Dependencies
-- API Gateway → Authentication Service
-- API Gateway → Chat Services
-- API Gateway → Explore Service
-- API Gateway → Admin Services
-- Chat Services → LLM Inference Service
-- Explore Service → LLM Inference Service
-- Explore Service → Redis Cache
-
-### Message Queue Dependencies
-- Admin Services → Message Queue
-- Background Tasks → Message Queue
-- Audit Service → Message Queue
-- Model Management → Message Queue
-
-## Scalability Patterns
-- Horizontal scaling
-- Load balancing
-- Caching strategies
-- Database sharding
-- Redis clustering
-- Distributed rate limiting
-
-## Security Patterns
-- JWT authentication
-- Role-based authorization
-- Data encryption
-- Secure communication
-- Cache security
-- Rate limiting
-- Token blacklisting 
+---
+*Last updated: {{date}}*

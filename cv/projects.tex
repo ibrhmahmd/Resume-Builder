@@ -9,51 +9,93 @@
 
 \begin{cventries}
 %---------------------------------------------------------
-\cventry
-    {Advanced LLM Platform built with ASP.NET Core, providing a comprehensive microservices framework for Ollama LLM integration with enterprise-grade architecture, security, and scalability.
-    } %
-    {OllamaNet — \href{https://github.com/ollamaNet/OllamaNet_Components}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}} % Project name
-    {Graduation Project} % Organisation
-    {2025} % Date(s)
-    {
-      \begin{cvitems} % Description(s) bullet points
-        \item \textbf{Architecture:}{ Microservices architecture with specialized components: API Gateway (Ocelot), Auth, Chat, Explore, Admin, and LLM Inference.}
-        \item \textbf{Communication:}{ Implemented both synchronous (direct API calls) and asynchronous (RabbitMQ) communication patterns, JWT Redistoken caching, rate limiting}
-        \item \textbf{Databases:}{ Shared approach with EF Core, Repository&UOW patterns, with service-specific schemas.}
-        \item \textbf{Technical Skills:}{ ASP.NET Core, EF Core, Redis, JWT, RabbitMQ, Ocelot Gateway, Microservices, SQL Server, Git, Docker}
-        \item \textbf{Soft Skills:}{ System Architecture Design, Technical Documentation, Team Management.}
-      \end{cvitems}
-    }
-    %--------------------------------------------------------------------
 
 \cventry
-    {Streamlit web application for YouTube video downloading with format options, quality selection, and progress tracking.} % 
-    {Streamlit Video-Downloader — \href{https://github.com/ibrhmahmd/Youtube-videoDownloader}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}} % Project name
-    {Techno Future Academy} % Organisation
-    {APR 2025} % Date(s)
+    {OllamaNet is a modular, LLM platform enabling authenticated users and administrators to converse with, manage, and explore LLMs
+    via independently deployable micro-services.
+    It provides a production-ready Services for generative-AI applications,
+    emphasizing clear separation of concerns, strong security, and extensibility.
+    Core objectives include real-time chat, model lifecycle management, robust authentication, content exploration, and scalable, resilient architecture.}
+    {OllamaNet}
+    {--}
+    {Date}
     {
-      \begin{cvitems} % Description(s) bullet points
-        \item \textbf{Architecture:}{ Three-layer design with UI, Download Core, and Processor components using Factory, Observer, and Strategy patterns.}
-        \item \textbf{Features \& Security:}{ Format selection, progress tracking, URL sanitization, efficient file operations with error handling.}
-        \item \textbf{Technical Skills:}{ Python, Streamlit, Pytube, FFmpeg, Async operations, Git.}
+      \begin{cvitems}
+        \item \textbf{Architecture:}{ Modular micro-services using Clean Architecture, Redis cache, RabbitMQ, and a central Gateway. Services include AuthService, ConversationService, ExploreService, and AdminService, all communicating via HTTP and messaging. Patterns: Repository, Resilience (Polly), Distributed Cache, Server-Sent Events for streaming.}
+        \item \textbf{Features:}{ Secure, real-time conversational AI; model lifecycle management; fast model discovery; streaming chat via SSE; centralized documentation via Memory Bank; scalable and resilient core.}
+        \item \textbf{Technical Skills:}{ .NET 9 (ASP.NET Core), Ocelot, SQL Server, EF Core, Redis, RabbitMQ, FluentValidation, JWT, Swagger, Semantic Kernal. }
       \end{cvitems}
     }
-    %--------------------------------------------------------------------
-      
-\cventry
-    {Local LLM server using Ollama framework for efficient deployment and interaction with open-source language models.} % 
-    {LLM Deployment with Ollama — \href{https://github.com/ibrhmahmd/spicy-avocado}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}} % Project name
-    {--} % Organisation
-    {FEB 2025} % Date(s)
-    {
-      \begin{cvitems} % Description(s) bullet points
-        \item \textbf{Model Deployment:}{ Deployed multiple LLMs (Qwen 2.5, Llama 3.2, Phi 3) with CUDA-based GPU acceleration for efficient inference.}
-        \item \textbf{Server Infrastructure:}{ Integrated NGROK for secure tunneling, enabling remote access to the local LLM server.}
-        \item \textbf{Technical Skills:}{ LLM Deployment, Python, REST APIs, CUDA, NGROK.}
-      \end{cvitems}
-    }
+    %-----
+    \begin{singlespace}
+% Your text here ----
+----
+\end{singlespace}
     %--------------------------------------------------------------------
 
+
+% \cventry
+%     {Streamlit web application for YouTube video downloading with format options, quality selection, and progress tracking.} % 
+%     {Streamlit Video-Downloader — \href{https://github.com/ibrhmahmd/Youtube-videoDownloader}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}} % Project name
+%     {Techno Future Academy} % Organisation
+%     {APR 2025} % Date(s)
+%     {
+%       \begin{cvitems} % Description(s) bullet points
+%         \item \textbf{Architecture:}{ Three-layer design with UI, Download Core, and Processor components using Factory, Observer, and Strategy patterns.}
+%         \item \textbf{Features \& Security:}{ Format selection, progress tracking, URL sanitization, efficient file operations with error handling.}
+%         \item \textbf{Technical Skills:}{ Python, Streamlit, Pytube, FFmpeg, Async operations, Git.}
+%       \end{cvitems}
+%     }
+%     %--------------------------------------------------------------------
+
+
+\cventry
+    {Lets users deploy and expose Ollama LLM models from cloud notebooks
+    as public APIs via ngrok, with RabbitMQ for service discovery.
+    Emphasizes simplicity, multi-model support, and seamless remote access.}
+    {LLM-Inference (Spicy Avocado)}
+    {--}
+    {Date}
+    {
+      \begin{cvitems}
+        \item \textbf{Architecture:}{ Notebook-first orchestration of Ollama (local LLM server), ngrok (public tunneling), and RabbitMQ (service discovery).}
+        \item \textbf{Features:}{ Deploy and serve multiple Ollama models; public API via ngrok; RabbitMQ-based service discovery; structured notebook cells for setup, deployment, and operation.}
+        \item \textbf{Performance:}{ Functional prototype with successful multi-model support, public API exposure, and reliable RabbitMQ integration.}
+        \item \textbf{Technical Skills:}{ Python, Jupyter Notebook, Ollama, ngrok, RabbitMQ, Uvicorn, pika, requests.}
+      \end{cvitems}
+    }
+    %-----
+    \begin{singlespace}
+% Your text here ----
+----
+\end{singlespace}
+
+
+
+\cventry
+    {ConversationService is a core microservice in OllamaNet, 
+    managing AI-powered conversations with real-time chat, message history, folder organization, note management, 
+    feedback, and document processing (RAG). It is designed for scalability, performance, 
+    and a seamless user experience.}
+    {ConversationService}
+    {--}
+    {Date}
+    {
+      \begin{cvitems}
+        \item \textbf{Architecture:}{ Modular, layered microservice. Implements domain-driven design, Clean Architecture, and robust caching.}
+        \item \textbf{Features:}{ Real-time chat, persistent conversation history, folder and note management, feedback collection, document upload and RAG, caching, service Discovery.}
+        \item \textbf{Performance:}{ Response time <100ms (cached), <1s (new); supports 10,000+ users; 99.9\% uptime; cache hit ratio >80\%.}
+        \item \textbf{Technical Skills:}{ .NET 9, ASP.NET Core, EF Core, SQL Server, Redis, Pinecone, Semantic Kernel, RabbitMQ, Polly, FluentValidation, JWT.}
+      \end{cvitems}
+    }
+    %-----
+    \begin{singlespace}
+% Your text here ----
+----
+\end{singlespace}
+
+
+    %--------------------------------------------------------------------
 \cventry
     {Speech-to-text solution using Google's Speech Recognition with FastAPI, supporting file uploads and microphone input.} % 
     {Speech-to-Text Transcription — \href{https://github.com/ibrhmahmd/audio-recognition}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}} % Project name
@@ -67,6 +109,8 @@
       \end{cvitems}
     }
     %--------------------------------------------------------------------
+
+
 
 \cventry
     {Web application for real estate companies to manage properties, tenants, and lease agreements with user-friendly portal.} %
@@ -82,8 +126,9 @@
     }
     %--------------------------------------------------------------------
 
+
 \cventry
-    {CNN-based image classifier for flower categories using TensorFlow and Keras, achieving >90% accuracy.} %
+    {CNN-based image classifier for flower categories using TensorFlow and Keras, achieving >90\% accuracy.} %
     {TensorFlow Flower Classifier — \href{https://github.com/ibrhmahmd/Image-Recognition-using-TensorFlow}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}} % Project name
     {University} % Organisation
     {MAY 2024} % Date(s)
@@ -95,46 +140,49 @@
       \end{cvitems}
     }
 %---------------------------------------------------------
-\end{cventries}  
+\end{cventries}
+
 
 \begin{cventries}
 %---------------------------------------------------------
-\cventry
-    {Classic Tetris game with C# and WPF featuring responsive controls and complete gameplay mechanics.} % 
-    {TETRIS — \href{https://github.com/ibrhmahmd/tetris}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}} % Project name
-    {DEPI} % Organisation
-    {July 2024} % Date(s)
-    {
-      \begin{cvitems} % Description(s) bullet points
-        \item \textbf{Architecture:}{ Object-oriented design with Model-View pattern, Factory Method for blocks, and GameState for state management.}
-        \item \textbf{Features:}{ Block movement/rotation, collision detection, line clearing, score tracking, and difficulty progression.}
-        \item \textbf{Technical Skills:}{ C#, WPF, XAML, .NET Framework, OOP, Game Development Principles.}
-      \end{cvitems}
-    }
-%---------------------------------------------------------
-\end{cventries}
-
-\begin{singlespace}
-  % Your text here ----
-  \end{singlespace}
-% \begin{cventries}
-% %---------------------------------------------------------
-%   \cventry
-%     {Uses a genetic algorithm to evolve an image over generations, aiming to closely reproduce a target image. It leverages the pygad library for algorithm operations, demonstrating the optimization of image reproduction through evolutionary processes.
-% } % 
-%     {Image Reproduction Using Genetic Algorithm — \href{https://github.com/ibrhmahmd/Genetic_Algorithm_Reproducing_Images}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}}
-% } % Project name
-%     {} % Organisation
+% \cventry
+%     {Classic Tetris game with C# and WPF featuring responsive controls and complete gameplay mechanics.} % 
+%     {TETRIS — \href{https://github.com/ibrhmahmd/tetris}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}} % Project name
+%     {DEPI} % Organisation
 %     {July 2024} % Date(s)
 %     {
 %       \begin{cvitems} % Description(s) bullet points
-%         \item {Development:Developed customizable parameters for the genetic algorithm, allowing for easy adjustments.}
-%         \item {Achieved a 30 percent reduction in experiment setup time through the framework.}
-%         \item {Integrated a fitness function to assess image similarity.
-%                 }
-%         \item {Developed a callback function to track progress during the algorithm's execution.}
-%         \item \textbf{Technical Skills:}{ Python, pygad, gari, numpy, imageio, matplotlib}
+%         \item \textbf{Architecture:}{ Object-oriented design with Model-View pattern, Factory Method for blocks, and GameState for state management.}
+%         \item \textbf{Features:}{ Block movement/rotation, collision detection, line clearing, score tracking, and difficulty progression.}
+%         \item \textbf{Technical Skills:}{ C#, WPF, XAML, .NET Framework, OOP, Game Development Principles.}
 %       \end{cvitems}
 %     }
-%---------------------------------------------------------
-\end{cventries}
+% \end{cventries}
+% %---------------------------------------------------------
+
+
+%% The following section is commented out properly
+%% \begin{singlespace}
+%%   % Your text here ----
+%% \end{singlespace}
+%% \begin{cventries}
+%% \cventry
+%%     {Uses a genetic algorithm to evolve an image over generations, aiming to closely reproduce a target image. It leverages the pygad library for algorithm operations, demonstrating the optimization of image reproduction through evolutionary processes.} % 
+%%     {Image Reproduction Using Genetic Algorithm — \href{https://github.com/ibrhmahmd/Genetic_Algorithm_Reproducing_Images}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}} % Project name
+%%     {} % Organisation
+%%     {July 2024} % Date(s)
+%%     {
+%%       \begin{cvitems} % Description(s) bullet points
+%%         \item {Development:Developed customizable parameters for the genetic algorithm, allowing for easy adjustments.}
+%%         \item {Achieved a 30 percent reduction in experiment setup time through the framework.}
+%%         \item {Integrated a fitness function to assess image similarity.}
+%%         \item {Developed a callback function to track progress during the algorithm's execution.}
+%%         \item \textbf{Technical Skills:}{ Python, pygad, gari, numpy, imageio, matplotlib}
+%%       \end{cvitems}
+%%     }
+%% \end{cventries}
+
+
+
+
+
