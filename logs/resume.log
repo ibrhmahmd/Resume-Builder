@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.7.5)  5 JUL 2025 22:44
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.7.5)  6 JUL 2025 01:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1240,8 +1240,8 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `resume.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'resume.bbl' not found.
-No file resume.bbl.
+Package biblatex Info: ... file 'resume.bbl' found.
+(E:\Users\Ibrahim\Desktop\Projects\Worthy\Resume-LATEX\logs\resume.bbl)
 Package biblatex Info: Reference section=0 on input line 35.
 Package biblatex Info: Reference segment=0 on input line 35.
 \headertextwidth=\skip110
@@ -1300,25 +1300,43 @@ Overfull \hbox (69.4979pt too wide) in alignment at lines 10--47
 [] [] 
  []
 
-) (cv/projects.tex
+) (cv/experience.tex
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <9> not avail
 able
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on inpu
-t line 28.
+t line 25.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 28.
+(Font)              scaled to size 9.0pt on input line 25.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 28.
+(Font)              scaled to size 9.0pt on input line 25.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 28.
+(Font)              scaled to size 8.0pt on input line 25.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <8> not avail
 able
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on inpu
-t line 28.
+t line 25.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 28.
+(Font)              scaled to size 8.0pt on input line 25.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 28.
+(Font)              scaled to size 9.0pt on input line 42.
+Runaway argument?
+cv/experience.tex:74: Paragraph ended before \cventry was complete.
+<to be read again> 
+                   \par 
+l.74 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+) (cv/projects.tex
+LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 90.
+LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/sc' will be
+(Font)              scaled to size 8.0pt on input line 90.
+[1
+
+]
 cv/projects.tex:126: Illegal parameter number in definition of \@sharp.
 <to be read again> 
                    ,
@@ -1338,23 +1356,6 @@ Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
-
-LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 141.
-LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/sc' will be
-(Font)              scaled to size 8.0pt on input line 141.
-[1
-
-]) (cv/experience.tex
-Runaway argument?
-cv/experience.tex:73: Paragraph ended before \cventry was complete.
-<to be read again> 
-                   \par 
-l.73 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
 
 ) (cv/publications.tex
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
@@ -1408,7 +1409,7 @@ Overfull \hbox (2.92001pt too wide) in paragraph at lines 23--47
    [] 
  []
 
-[2])
+)
 
 resume.tex:56: LaTeX Error: \begin{center} on input line 146 ended by \end{docu
 ment}.
@@ -1423,7 +1424,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[3] (E:\Users\Ibrahim\Desktop\Projects\Worthy\Resume-LATEX\logs\resume.aux)
+[2] (E:\Users\Ibrahim\Desktop\Projects\Worthy\Resume-LATEX\logs\resume.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1440,19 +1441,21 @@ Package logreq Info: Writing requests to 'resume.run.xml'.
 \openout1 = `resume.run.xml'.
 
  )
-(\end occurred inside a group at level 2)
+(\end occurred inside a group at level 4)
 
-### semi simple group (level 2) entered at line 146 (\begingroup)
-### semi simple group (level 1) entered at line 146 (\begingroup)
+### semi simple group (level 4) entered at line 146 (\begingroup)
+### semi simple group (level 3) entered at line 146 (\begingroup)
+### semi simple group (level 2) entered at line 10 (\begingroup)
+### semi simple group (level 1) entered at line 10 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 40279 strings out of 409617
- 810079 string characters out of 5773608
- 1959191 words of memory out of 5000000
- 61784 multiletter control sequences out of 15000+600000
+ 40283 strings out of 409617
+ 810196 string characters out of 5773608
+ 1957191 words of memory out of 5000000
+ 61786 multiletter control sequences out of 15000+600000
  560937 words of font info for 134 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  116i,12n,129p,566b,852s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on E:\Users\Ibrahim\Desktop\Projects\Worthy\Resume-LATEX\logs\re
-sume.pdf (3 pages).
+sume.pdf (2 pages).

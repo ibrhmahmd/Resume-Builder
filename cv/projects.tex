@@ -11,19 +11,20 @@
 %---------------------------------------------------------
 
 \cventry
-    {OllamaNet is a modular, LLM platform enabling authenticated users and administrators to converse with, manage, and explore LLMs
+    {OllamaNet is a modular, LLM platform enabling users to converse with, manage, and explore LLMs
     via independently deployable micro-services.
-    It provides a production-ready Services for generative-AI applications,
-    emphasizing clear separation of concerns, strong security, and extensibility.
-    Core objectives include real-time chat, model lifecycle management, robust authentication, content exploration, and scalable, resilient architecture.}
-    {OllamaNet}
+    Core objectives include model lifecycle management, Context exploration, and scalable, resilient architecture.}
+    {OllamaNet — \href{https://github.com/ollamaNet/OllamaNet-Architecture}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}}
     {--}
-    {Date}
+    {May 2025}
     {
       \begin{cvitems}
-        \item \textbf{Architecture:}{ Modular micro-services using Clean Architecture, Redis cache, RabbitMQ, and a central Gateway. Services include AuthService, ConversationService, ExploreService, and AdminService, all communicating via HTTP and messaging. Patterns: Repository, Resilience (Polly), Distributed Cache, Server-Sent Events for streaming.}
-        \item \textbf{Features:}{ Secure, real-time conversational AI; model lifecycle management; fast model discovery; streaming chat via SSE; centralized documentation via Memory Bank; scalable and resilient core.}
-        \item \textbf{Technical Skills:}{ .NET 9 (ASP.NET Core), Ocelot, SQL Server, EF Core, Redis, RabbitMQ, FluentValidation, JWT, Swagger, Semantic Kernal. }
+        \item \textbf{Architecture:}{ Modular micro-services using Clean Architecture, Redis cache, RabbitMQ, and a central Gateway.
+                                      Services include AuthService, ConversationService, ExploreService, and AdminService, 
+                                      all communicating via HTTP and messaging.}
+        \item \textbf{Patterns:}{ Repository, Resilience (Polly), Distributed Cache, Server-Sent Events for streaming.}
+        \item \textbf{Features:}{ Context monetoring; model lifecycle management; fast model discovery; streaming via SSE; centralized documentation via Memory Bank; scalable and resilient core.}
+        \item \textbf{Technical Skills:}{ .NET 9 (ASP.NET Core), Ocelot, SQL Server, EF Core, Redis, RabbitMQ, FluentValidation, JWT, Swagger, Semantic Kernal.}
       \end{cvitems}
     }
     %-----
@@ -53,9 +54,9 @@
     {Lets users deploy and expose Ollama LLM models from cloud notebooks
     as public APIs via ngrok, with RabbitMQ for service discovery.
     Emphasizes simplicity, multi-model support, and seamless remote access.}
-    {LLM-Inference (Spicy Avocado)}
+    {LLM-Inference — \href{https://github.com/ibrhmahmd/Inference-Engine}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}}
     {--}
-    {Date}
+    {May 2025}
     {
       \begin{cvitems}
         \item \textbf{Architecture:}{ Notebook-first orchestration of Ollama (local LLM server), ngrok (public tunneling), and RabbitMQ (service discovery).}
@@ -75,17 +76,16 @@
 \cventry
     {ConversationService is a core microservice in OllamaNet, 
     managing AI-powered conversations with real-time chat, message history, folder organization, note management, 
-    feedback, and document processing (RAG). It is designed for scalability, performance, 
-    and a seamless user experience.}
-    {ConversationService}
+    feedback, and document processing (RAG).}
+    {ConversationService — \href{https://github.com/ollamaNet/OllamaNet-Architecture/tree/master/ConversationService}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}}
     {--}
-    {Date}
+    {May 2025}
     {
       \begin{cvitems}
         \item \textbf{Architecture:}{ Modular, layered microservice. Implements domain-driven design, Clean Architecture, and robust caching.}
-        \item \textbf{Features:}{ Real-time chat, persistent conversation history, folder and note management, feedback collection, document upload and RAG, caching, service Discovery.}
-        \item \textbf{Performance:}{ Response time <100ms (cached), <1s (new); supports 10,000+ users; 99.9\% uptime; cache hit ratio >80\%.}
-        \item \textbf{Technical Skills:}{ .NET 9, ASP.NET Core, EF Core, SQL Server, Redis, Pinecone, Semantic Kernel, RabbitMQ, Polly, FluentValidation, JWT.}
+        \item \textbf{Features:}{ Real-time chat, persistent conversation history, folder and note management, document upload and RAG, caching, service Discovery.}
+        \item \textbf{Performance:}{ Response time <100ms (cached), 99.9\% uptime; cache hit ratio >80\%.}
+        \item \textbf{Technical Skills:}{ ASP.NET Core, EF Core, Redis, Pinecone, Semantic Kernel, RabbitMQ, Polly, FluentValidation.}
       \end{cvitems}
     }
     %-----
@@ -127,20 +127,20 @@
     %--------------------------------------------------------------------
 
 
-\cventry
-    {CNN-based image classifier for flower categories using TensorFlow and Keras, achieving >90\% accuracy.} %
-    {TensorFlow Flower Classifier — \href{https://github.com/ibrhmahmd/Image-Recognition-using-TensorFlow}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}} % Project name
-    {University} % Organisation
-    {MAY 2024} % Date(s)
-    {
-      \begin{cvitems} % Description(s) bullet points
-        \item \textbf{Architecture:}{ Sequential CNN with three Conv+MaxPool blocks, dropout layers, and optimized for Adam with SparseCategoricalCrossentropy.}
-        \item \textbf{Data Processing:}{ Comprehensive image preprocessing with normalization and augmentation (flips, rotations, zooms).}
-        \item \textbf{Technical Skills:}{ Python, TensorFlow, Keras, NumPy, Matplotlib, CNN Design, Data Augmentation.}
-      \end{cvitems}
-    }
-%---------------------------------------------------------
-\end{cventries}
+% \cventry
+%     {CNN-based image classifier for flower categories using TensorFlow and Keras, achieving >90\% accuracy.} %
+%     {TensorFlow Flower Classifier — \href{https://github.com/ibrhmahmd/Image-Recognition-using-TensorFlow}{\color{midnightblue}\textbf{GitHub}} \textrm{\faArrowRight}} % Project name
+%     {University} % Organisation
+%     {MAY 2024} % Date(s)
+%     {
+%       \begin{cvitems} % Description(s) bullet points
+%         \item \textbf{Architecture:}{ Sequential CNN with three Conv+MaxPool blocks, dropout layers, and optimized for Adam with SparseCategoricalCrossentropy.}
+%         \item \textbf{Data Processing:}{ Comprehensive image preprocessing with normalization and augmentation (flips, rotations, zooms).}
+%         \item \textbf{Technical Skills:}{ Python, TensorFlow, Keras, NumPy, Matplotlib, CNN Design, Data Augmentation.}
+%       \end{cvitems}
+%     }
+% %---------------------------------------------------------
+% \end{cventries}
 
 
 \begin{cventries}
