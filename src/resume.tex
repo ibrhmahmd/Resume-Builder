@@ -1,7 +1,7 @@
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
-\documentclass[11pt, a4paper]{russell}
+\documentclass[11pt, a4paper]{templates/russell}
 
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 \fontdir[fonts/]
@@ -17,7 +17,6 @@
 %-------------------------------------------------------------------------------
 \usepackage{hyperref}
 \usepackage{url}
-\usepackage[backend=biber,style=authoryear,sorting=ydnt,defernumbers=true]{biblatex}
 \addbibresource{cv/references.bib}
 
 %-------------------------------------------------------------------------------
@@ -37,14 +36,14 @@
 \makecvheader
 \makecvfooter{\today}{}{\thepage}
 
-\input{cv/summary.tex}
-\input{cv/skills.tex}
-\input{cv/experience.tex}
-\input{cv/projects.tex}
-\input{cv/publications.tex}  % Publications Section
-\input{cv/achievements.tex}
-\input{cv/education.tex}
-% \input{cv/languages.tex}
+\input{cv/sections/summary.tex}
+\input{cv/sections/skills.tex}
+\input{cv/sections/experience.tex}
+\input{cv/sections/projects.tex}
+\input{cv/sections/publications.tex}  % Publications Section
+\input{cv/sections/achievements.tex}
+\input{cv/sections/education.tex}
+% \input{cv/sections/languages.tex}
 
 \vspace*{\fill}
 % \centering{\textbf{References available upon request.}}

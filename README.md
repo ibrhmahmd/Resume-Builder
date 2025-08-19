@@ -2,31 +2,67 @@
 
 This project provides a LaTeX-based resume template with a memory bank system for managing project details. It's designed to work seamlessly with Cursor's AI assistant to maintain and update your resume efficiently.
 
+The project now features an improved directory structure that better organizes source files, build outputs, documentation, and utility scripts for easier maintenance and scalability.
+
 ## Features
 
 - **LaTeX Resume Template**: Professional, customizable resume format
 - **Project Memory Banks**: Structured storage of project details
 - **Cursor AI Integration**: Easily update your resume with AI assistance
 - **Version-Controlled**: Track changes to your resume over time
+- **Improved Directory Structure**: Better organization of source files, build outputs, documentation, and utility scripts
+- **Scalable Architecture**: Easily extendable structure for adding new features and components
 
 ## Project Structure
 
 ```
 Resume-LATEX/
-├── cv/                       # CV sections (projects.tex, education.tex, etc.)
-├── font/                     # Resume fonts
-├── logs/                     # LaTeX build logs (gitignored)
-├── Projects-Memories/        # Project memory banks
-│   ├── ProjectName-memory-bank/
-│   │   ├── projectbrief.md   # Project overview
-│   │   ├── techContext.md    # Technical details
-│   │   ├── systemPatterns.md # Architecture patterns
-│   │   └── productContext.md # Product features
-├── memory-bank/              # Additional memory files
-├── .gitignore                # Git ignore configuration
-├── compile.bat               # Compilation script
-├── resume.tex                # Main resume file
-└── russell.cls               # LaTeX class file
+├── .cursor/                     # Cursor IDE specific configurations
+├── .github/                     # GitHub specific files
+│   └── workflows/               # CI/CD workflows
+├── docs/                        # Documentation
+│   ├── guides/                  # Detailed guides
+│   ├── templates/               # Template files
+│   └── CHANGELOG.md             # Project changelog
+├── src/                         # Source files
+│   ├── cv/                      # CV sections
+│   │   ├── sections/            # Individual section files
+│   │   │   ├── experience.tex
+│   │   │   ├── education.tex
+│   │   │   ├── projects.tex
+│   │   │   ├── publications.tex
+│   │   │   ├── skills.tex
+│   │   │   ├── languages.tex
+│   │   │   ├── achievements.tex
+│   │   │   └── summary.tex
+│   │   └── references.bib       # Bibliography file
+│   ├── fonts/                   # Custom fonts
+│   ├── templates/               # LaTeX templates
+│   │   └── russell.cls          # Main class file
+│   └── resume.tex               # Main resume file
+├── build/                       # Build outputs
+│   ├── logs/                    # Compilation logs
+│   └── pdf/                     # Generated PDFs
+├── scripts/                     # Utility scripts
+│   ├── compile.bat              # Compilation script
+│   └── install_latex_deps.bat   # Dependency installation script
+├── memory-bank/                 # Project memory banks
+│   ├── main/                    # Main project memory
+│   │   ├── projectbrief.md
+│   │   ├── productContext.md
+│   │   ├── systemPatterns.md
+│   │   ├── techContext.md
+│   │   ├── activeContext.md
+│   │   └── progress.md
+│   └── projects/                # Individual project memories
+│       ├── ProjectName-memory-bank/
+│       │   ├── projectbrief.md
+│       │   ├── productContext.md
+│       │   ├── systemPatterns.md
+│       │   └── techContext.md
+├── .gitignore                   # Git ignore configuration
+├── README.md                    # Main documentation
+└── LICENSE                      # License information
 ```
 
 ## Getting Started
